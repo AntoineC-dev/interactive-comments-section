@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card {
+    @apply bg-neutral-100 rounded-lg p-4 sm:p-6 grid;
+  }
+
+  .btn {
+    @apply flex justify-center items-center p-2 gap-2 rounded-lg transition-colors;
+  }
+
+  .btn-lg {
+    @apply flex justify-center items-center gap-2 px-5 py-3 rounded-lg uppercase font-medium text-neutral-100 transition-colors;
+  }
+
+  .btn-accent {
+    @apply bg-accent [@media(hover:hover)]:hover:enabled:bg-accent-soft disabled:bg-neutral-300;
+  }
+
+  .btn-danger {
+    @apply bg-red [@media(hover:hover)]:hover:enabled:bg-red-pale;
+  }
+
+  .btn-neutral {
+    @apply bg-neutral-400 [@media(hover:hover)]:hover:enabled:bg-neutral-400/60;
+  }
+
+  .form-card {
+    @apply mt-4 gap-4 md:gap-x-6 grid-cols-[auto_1fr_auto] place-items-center md:place-items-start justify-items-stretch md:justify-items-stretch;
+  }
+
+  .form-editable {
+    @apply col-span-3 md:col-span-1 md:col-start-2;
+  }
+
+  .form-img {
+    @apply w-8 col-span-1 md:col-start-1 md:row-start-1;
+  }
+
+  .form-btn {
+    @apply col-span-1 col-start-3;
+  }
+
+  .editable-wrapper {
+    @apply rounded-md px-4 py-2 border border-neutral-300 focus:border-accent focus-within:border-accent min-h-[120px] cursor-pointer focus-within:cursor-text;
+  }
+
+  .editable {
+    @apply outline-none caret-accent;
+  }
+
+  .editable-pre {
+    @apply text-neutral-400;
+  }
+}
